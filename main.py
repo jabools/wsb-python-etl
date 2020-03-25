@@ -29,6 +29,8 @@ def main():
     for artist, title, plays in songs_manager.top_listened_songs():
         print('{0} - {1} was played {2} times'.format(artist, title.strip(), plays))
 
+    connection.disconnect()
+
     stop_time = time.time()
 
     print('\nAll queries executed within {0} seconds.'.format(stop_time - start_time))
